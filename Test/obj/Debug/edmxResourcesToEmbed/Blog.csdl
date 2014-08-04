@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BlogDBModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="BlogDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BlogUser" EntityType="BlogDBModel.BlogUser" />
+    <EntitySet Name="Post" EntityType="BlogDBModel.Post" />
+    <EntitySet Name="Comment" EntityType="BlogDBModel.Comment" />
+    <AssociationSet Name="CommentPost" Association="BlogDBModel.CommentPost">
+      <End Role="Comment" EntitySet="Comment" />
+      <End Role="Post" EntitySet="Post" />
+    </AssociationSet>
+    <AssociationSet Name="BlogUserPost" Association="BlogDBModel.BlogUserPost">
+      <End Role="BlogUser" EntitySet="BlogUser" />
+      <End Role="Post" EntitySet="Post" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="BlogUser">
+    <Key>
+      <PropertyRef Name="BlogID" />
+    </Key>
+    <Property Name="BlogID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BlogName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Posts" Relationship="BlogDBModel.BlogUserPost" FromRole="BlogUser" ToRole="Post" />
+  </EntityType>
+  <EntityType Name="Post">
+    <Key>
+      <PropertyRef Name="PostID" />
+    </Key>
+    <Property Name="PostID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PostTitle" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="PostContent" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="BlogID" Type="Int32" />
+    <NavigationProperty Name="Comment" Relationship="BlogDBModel.CommentPost" FromRole="Post" ToRole="Comment" />
+    <NavigationProperty Name="BlogUser" Relationship="BlogDBModel.BlogUserPost" FromRole="Post" ToRole="BlogUser" />
+  </EntityType>
+  <EntityType Name="Comment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Content" Nullable="false" />
+    <Property Type="Int32" Name="PostID" Nullable="false" />
+    <NavigationProperty Name="Post" Relationship="BlogDBModel.CommentPost" FromRole="Comment" ToRole="Post" />
+  </EntityType>
+  <Association Name="CommentPost">
+    <End Type="BlogDBModel.Comment" Role="Comment" Multiplicity="*" />
+    <End Type="BlogDBModel.Post" Role="Post" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Post">
+        <PropertyRef Name="PostID" />
+      </Principal>
+      <Dependent Role="Comment">
+        <PropertyRef Name="PostID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BlogUserPost">
+    <End Type="BlogDBModel.BlogUser" Role="BlogUser" Multiplicity="1" />
+    <End Type="BlogDBModel.Post" Role="Post" Multiplicity="*" />
+  </Association>
+</Schema>

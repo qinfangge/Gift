@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BlogDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="BlogDBModelStoreContainer">
+    <EntitySet Name="BlogUser" EntityType="BlogDBModel.Store.BlogUser" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Post" EntityType="BlogDBModel.Store.Post" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Comment" EntityType="BlogDBModel.Store.Comment" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="CommentPost" Association="BlogDBModel.Store.CommentPost">
+      <End Role="Comment" EntitySet="Comment" />
+      <End Role="Post" EntitySet="Post" />
+    </AssociationSet>
+    <AssociationSet Name="BlogUserPost" Association="BlogDBModel.Store.BlogUserPost">
+      <End Role="BlogUser" EntitySet="BlogUser" />
+      <End Role="Post" EntitySet="Post" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="BlogUser">
+    <Key>
+      <PropertyRef Name="BlogID" />
+    </Key>
+    <Property Name="BlogID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BlogName" Type="varchar" Nullable="true" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Post">
+    <Key>
+      <PropertyRef Name="PostID" />
+    </Key>
+    <Property Name="PostID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PostTitle" Type="nchar" Nullable="true" MaxLength="10" />
+    <Property Name="PostContent" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="BlogID" Type="int" Nullable="true" />
+    <Property Name="BlogUser_BlogID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Comment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Content" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PostID" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="CommentPost">
+    <End Role="Comment" Type="BlogDBModel.Store.Comment" Multiplicity="*" />
+    <End Role="Post" Type="BlogDBModel.Store.Post" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Post">
+        <PropertyRef Name="PostID" />
+      </Principal>
+      <Dependent Role="Comment">
+        <PropertyRef Name="PostID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BlogUserPost">
+    <End Role="BlogUser" Type="BlogDBModel.Store.BlogUser" Multiplicity="1" />
+    <End Role="Post" Type="BlogDBModel.Store.Post" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BlogUser">
+        <PropertyRef Name="BlogID" />
+      </Principal>
+      <Dependent Role="Post">
+        <PropertyRef Name="BlogUser_BlogID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

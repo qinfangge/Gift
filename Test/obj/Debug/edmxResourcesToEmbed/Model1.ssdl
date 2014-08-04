@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="eedscqjyModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="eedscqjyModelStoreContainer">
+    <EntitySet Name="News" EntityType="eedscqjyModel.Store.News" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="News">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="source" Type="varchar" MaxLength="50" />
+    <Property Name="titleImage" Type="varchar" MaxLength="100" />
+    <Property Name="content" Type="text" Nullable="false" />
+    <Property Name="keywords" Type="varchar" MaxLength="100" />
+    <Property Name="description" Type="varchar" MaxLength="300" />
+    <Property Name="addTime" Type="datetime" />
+    <Property Name="category" Type="int" />
+    <Property Name="recommend" Type="int" />
+    <Property Name="userId" Type="int" />
+    <Property Name="isDel" Type="bit" />
+    <Property Name="hit" Type="int" />
+    <Property Name="isSwitch" Type="bit" />
+  </EntityType>
+</Schema>

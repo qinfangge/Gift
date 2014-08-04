@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<title>鄂尔多斯产权交易中心</title>
+<meta content="" name="keywords">
+<meta content="" name="description">
+<meta charset="utf-8">
+<meta content="width=device-width" name="viewport">
+<link type="text/css" rel="stylesheet" href="css/main.css">
+<script type="text/javascript">
+function $(i){return document.getElementById(i)}
+function sh(i){$(i).style.display = $(i).style.display?"" : "none"}
+function gets_value(str){$('class').value=str;sh('type');}
+</script>
+</head>
+<body>
+   <div class="container">
+    <header class="alpha">
+        <div class="middle" style="background:none;"> 
+            <h1 class="f1">鄂尔多斯产权交易中心</h1>
+        </div>
+   </header>
+      <!--内容开始-->
+          <div class="vipwrap c100">
+              <div class="mem_top">
+                 <h3>新用户注册</h3>
+                 <span class="reg_r">我已注册，现在就<a href="">登陆</a></span>
+              </div>
+              <div class="reg_con">
+                    <div class="regist_left">
+                           <dl class="cc">
+                            <dt><label for="regname">用户类型：</label></dt>
+                            <dd class="box ip">
+                               <input type="text" name="class" id="class" onClick="sh('type');" class="search-hotwords " value="请选择用户类型"/ >
+                               <div id="type" style="display:none;">
+                                 <ul>
+                                   <li><span class="ccc"><a onclick="gets_value('拍卖公司')" href="#">拍卖公司</a></span></li>
+                                   <li><span class="ccc"><a onclick="gets_value('审计')" href="#">审计</a></span></li>
+                                </ul>
+                              </div>
+                            </dd>
+                           </dl>
+                    <dl class="cc">
+                            <dt><label for="regname">用户名：</label></dt>
+                            <dd class="box ip"><input id="regname" class="input" type="text" maxlength="15" value="" name="regname"></dd>
+                            <dd class="tp">
+                                <div id="regname_info" class="txt-info-mouseout">*  	
+                                 6~12个字符，包括字母、数字、下划线，以字母开头，字母或数字结尾</div>
+                             </dd>
+                           </dl>
+                           <dl class="cc">
+                            <dt><label for="regname">密码：</label></dt>
+                            <dd class="box ip"><input id="regpwd" class="input" type="password" ></dd>
+                            <dd class="tp">
+                                <div id="regname_info" class="txt-info-mouseout">*  	
+                                  6~16个字符，包括字母、数字、特殊符号，区分大小写</div>
+                             </dd>
+                           </dl>
+                            <dl class="cc">
+                            <dt><label for="regname">确认密码：</label></dt>
+                            <dd class="box ip"><input id="regname" class="input" type="text" maxlength="15" val></dd>
+                            <dd class="tp">
+                                <div id="regname_info" class="txt-info-mouseout">*  	
+                                   请再次输入密码</div>
+                             </dd>
+                           </dl>
+                            <dl class="cc">
+                            <dt><label for="regname">验证码：</label></dt>
+                            <dd class="av"><input id="code" type="text" name="code"></dd>
+                            <dd class="tp">
+                                <img id="codeimg" alt="" src="images/randompic..jpg" ><a onclick="change();" href="#">看不清换一张</a>
+                             </dd>
+                           </dl>
+                            <dl class="cc">
+                            <dt>&nbsp;</dt>
+                            <dd class="ip">
+                                <label><input class="lause" type="checkbox" name="rgpermit" value="1">我已阅读并完全同意
+                               <a class="ble" onclick="permit();" style="cursor:pointer" checked="checked">条款内容</a>
+                              </label>
+                            </dd>
+                            <dd class="tp">
+                                <div id="regname_info" class="txt-info-mouseout"> </div>
+                             </dd>
+                           </dl>
+                           <dl>
+                               <dt>&nbsp;</dt>
+                               <dd><input class="confirm" type="submit" title="立即注册" value="立即注册"></dd>
+                         </dl>
+                    </div>
+              </div>
+              
+              
+          </div>
+       <!--内容结束-->
+     <div class="ter" style="background:none;">
+         <div class="footer"> 
+            <div class="ff_bottom">
+               <div class="inner">
+                      <div class="bb_fr">
+                                       <div class="block_social_footer">
+                                          <ul>
+                                            <Li><a class="tw" href="#"></a></Li>
+                                            <Li><a class="rss" href="#"></a></Li>
+                                            <Li><a class="fb" href="#"></a></Li>
+                                         </ul>
+                                       </div>
+                                    </div>
+                               <div class="block_copyrights"><p>公司地址：鄂尔多斯市广东路689号海通证券大厦3508室77 传真：021-63411376*<br/>
+                                  客服电话：400 6563 229 总机：021-634113<br/>  <a class="icp">鄂尔多斯产权交易中心 版权所有 沪ICP备10006454号 </a></p>
+                                </div>    
+                                  
+              </div>
+             </div>
+         </div>
+     </div>
+          
+</body>
+</html>

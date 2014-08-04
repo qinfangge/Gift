@@ -1,0 +1,149 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" EnableViewState="false" CodeBehind="Site.master.cs" Inherits="CMS.Web.Site" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <title></title>
+
+    <asp:Literal ID="SEOkeyWords" runat="server"></asp:Literal>
+    <asp:Literal ID="SEODescription" runat="server"></asp:Literal>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link type="text/css" rel="stylesheet" href="css/main.css" />
+    <link type="text/css" rel="stylesheet" href="css/home.css" />
+    <link type="text/css" rel="stylesheet" href="css/main_repair.css" />
+    <script type='text/javascript' src="Js/jquery-1.6.1.min.js"></script>
+    <script type="text/javascript" src="js/organictabs.jquery.js"></script>
+    <script type='text/javascript'>
+        $(function () {
+
+            var href = window.location.pathname + window.location.search;
+
+            if (href.indexOf("pid")) {
+
+                var re = new RegExp("\\/NewsList.aspx\\?category=(\\d+)&pid=(\\d+)", "gmi");
+
+                href = href.replace(re, "/NewsList.aspx?category=$2");
+            }
+            href = window.decodeURI(href);
+            $(".nav a[href=" + href + "]").parent().addClass("on").siblings().removeClass();
+            $("#example-one").organicTabs();
+
+            $("#searchButton").click(function () {
+                var keyWords = $.trim($("#keyWords").val());
+
+                if (keyWords == "") {
+
+                    alert("请输入搜索的关键词!");
+
+                } else {
+
+                    window.location.href = "Search.aspx?keyWords=" + keyWords;
+
+                }
+                return false;
+            });
+        });
+
+    </script>
+    <asp:ContentPlaceHolder ID="PageHeader" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div class="navibar">
+                <div class="header_top  clearfix">
+                    <div class="con_left">
+                        <span class="add"><a onclick="javascript:window.external.AddFavorite('http://www.baidu.com','鄂尔多斯产权交易中心')" class="fn">收藏我们</a></span>
+                    </div>
+                    <div class="col_right">
+                        <span class="login" id="userinfo">
+                            <span class="head_img">
+                                <img height="20" border="0" src="images/top_user.gif" style="vertical-align: top">
+                            </span>
+                            <span>
+                                <asp:HyperLink Visible="false" ID="LoginName" runat="server">HyperLink</asp:HyperLink>你好，欢迎来到鄂尔多斯公共资源交易平台&nbsp;&nbsp;&nbsp;&nbsp;
+
+                                <asp:Literal ID="NoLogin" Visible="false" runat="server">
+                                      
+                                     <a  href="Login.aspx"style="padding: 0 5px;">[登录]</a>或
+                                    <a href="Regist.aspx" onclick=";" style="padding: 0 5px;">[注册]</a>
+
+                                </asp:Literal>
+
+
+                            </span>
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="docbar">
+                <div class="header clearfix">
+                    <div class="logo">
+                        <a href="/">
+                            <img width="317" height="51" border="0" src="images/logo.gif" /></a>
+                    </div>
+                    <div class="search">
+
+
+                        <input id="keyWords" type="text" value="<%=keywords %>" name="searchTxt" maxlength="30" class="search_input" />
+                        <input id="searchButton" type="button" value="搜索" class="s_btn" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav">
+                <ul>
+                    <li class="on"><a href="/">首   页</a></li>
+                    <li class=""><a href="/SinglePage.aspx?title=关于我们">关于我们</a></li>
+                    <li class=""><a href="/SinglePage.aspx?title=企业文化">企业文化</a></li>
+                    <li class=""><a href="/XMLY.aspx">项目路演</a></li>
+                    <li class=""><a href="/NewsList.aspx?category=19">新闻中心</a></li>
+                    <li class=""><a href="/NewsList.aspx?category=25">政策法规</a></li>
+                    <li class=""><a href="/NewsList.aspx?category=30">交易规则</a></li>
+
+                    <li class=""><a href="/NewsList.aspx?category=26">会员专区</a></li>
+
+
+                    <li class=""><a href="/GuestBook.aspx">在线咨询 </a></li>
+
+                </ul>
+            </div>
+
+            <div id="content">
+                <asp:ContentPlaceHolder ID="Main" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+
+            <div class="footer">
+                <p>
+                    客服电话：<asp:Literal ID="Mobile" runat="server"></asp:Literal>(<asp:Literal ID="Contactor" runat="server"></asp:Literal>) 传真：<asp:Literal ID="Fax" runat="server"></asp:Literal>
+                    公司地址：<asp:Literal ID="Address" runat="server"></asp:Literal>QQ:<asp:Literal ID="QQ" runat="server"></asp:Literal>
+                    邮编：<asp:Literal ID="Zip" runat="server"></asp:Literal>
+                </p>
+                <p>&copy;2014鄂尔多斯公共资源交易平台有版权所有 沪ICP备10006454号-1 </p>
+                <div class="other">
+                    <asp:Literal ID="Other" runat="server"></asp:Literal>
+                </div>
+                <div style="text-align: center;">
+                    <a href="#">
+                        <img border="0" src="images/kxwz.png" style="margin-right: 5px;" /></a>
+                    <a href="#">
+                        <img border="0" src="images/sfrz.png" style="margin-right: 5px;" /></a>
+                    <a href="#">
+                        <img border="0" src="images/sm.png" style="margin-right: 5px;" /></a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </form>
+</body>
+</html>

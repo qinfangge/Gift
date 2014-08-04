@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="eedscqjyModelStoreContainer" CdmEntityContainer="eedscqjyEntities">
+    <EntitySetMapping Name="News">
+      <EntityTypeMapping TypeName="eedscqjyModel.News">
+        <MappingFragment StoreEntitySet="News">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="source" ColumnName="source" />
+          <ScalarProperty Name="titleImage" ColumnName="titleImage" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="keywords" ColumnName="keywords" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="addTime" ColumnName="addTime" />
+          <ScalarProperty Name="category" ColumnName="category" />
+          <ScalarProperty Name="recommend" ColumnName="recommend" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="isDel" ColumnName="isDel" />
+          <ScalarProperty Name="hit" ColumnName="hit" />
+          <ScalarProperty Name="isSwitch" ColumnName="isSwitch" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
