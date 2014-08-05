@@ -499,6 +499,7 @@
     <Content Include="App_Data\Contact.txt" />
     <Content Include="App_Data\UserType.xml" />
     <Content Include="App_Data\water.png" />
+    <Content Include="bin\URLRewriter.dll" />
     <Content Include="Controls\Contact.ascx" />
     <Content Include="Controls\CurrentPosition.ascx" />
     <Content Include="Controls\Category.ascx" />
@@ -1227,7 +1228,6 @@
     <Content Include="Admin\Master\MasterPage.master" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="bin\" />
     <Folder Include="Components\" />
     <Folder Include="Upload\" />
   </ItemGroup>
