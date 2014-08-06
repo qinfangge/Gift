@@ -11,10 +11,9 @@ using System.Web.UI.HtmlControls;
 using System.Text;
 using Maticsoft.Common;
 using LTP.Accounts.Bus;
-using tk.tingyuxuan.utils;
-namespace CMS.Web.Admin.Attribute
+namespace CMS.Web.Attribute
 {
-    public partial class Add : CommonPage
+    public partial class Add : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -25,10 +24,6 @@ namespace CMS.Web.Admin.Attribute
 		{
 			
 			string strErr="";
-			if(!PageValidate.IsNumber(txtid.Text))
-			{
-				strErr+="id格式错误！\\n";	
-			}
 			if(this.txtname.Text.Trim().Length==0)
 			{
 				strErr+="name不能为空！\\n";	
@@ -40,28 +35,26 @@ namespace CMS.Web.Admin.Attribute
 
 			if(strErr!="")
 			{
-				MessageBoxTip.Alert(this,strErr);
+				MessageBox.Show(this,strErr);
 				return;
 			}
-			int id=int.Parse(this.txtid.Text);
 			string name=this.txtname.Text;
 			string style=this.txtstyle.Text;
 
 			CMS.Model.Attribute model=new CMS.Model.Attribute();
-			model.id=id;
 			model.name=name;
 			model.style=style;
 
 			CMS.BLL.Attribute bll=new CMS.BLL.Attribute();
 			bll.Add(model);
-			MessageBoxTip.AlertAndRedirect(this,"保存成功！","Add.aspx");
+            tk.tingyuxuan.utils.MessageBoxTip.AlertAndRedirect(this, "保存成功！", "add.aspx");
 
 		}
 
 
         public void btnCancle_Click(object sender, EventArgs e)
         {
-            Response.Redirect("List.aspx");
+            Response.Redirect("list.aspx");
         }
     }
 }

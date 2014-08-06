@@ -14,21 +14,21 @@
 		用户名
 	：</td>
 	<td class="textWrapper">
-		<asp:TextBox id="txtuserName" runat="server" Width="200px"></asp:TextBox>
+		<asp:TextBox id="txtuserName" runat="server" ></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td >
 		密码
 	：</td>
 	<td class="textWrapper">
-		<asp:TextBox id="txtpassword" runat="server" Width="200px"></asp:TextBox>
+		<asp:TextBox id="txtpassword" runat="server" ></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td >
 		邮箱
 	：</td>
 	<td class="textWrapper">
-		<asp:TextBox id="txtemail" runat="server" Width="200px"></asp:TextBox>
+		<asp:TextBox id="txtemail" runat="server" ></asp:TextBox>
 	</td></tr>
 	
 	
@@ -37,14 +37,14 @@
 		联系人
 	：</td>
 	<td class="textWrapper">
-		<asp:TextBox id="txtrealName" runat="server" Width="200px"></asp:TextBox>
+		<asp:TextBox id="txtrealName" runat="server" ></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td >
 		联系电话
 	：</td>
 	<td class="textWrapper">
-		<asp:TextBox id="txtphone" runat="server" Width="200px"></asp:TextBox>
+		<asp:TextBox id="txtphone" runat="server" ></asp:TextBox>
 	</td></tr>
 	
            

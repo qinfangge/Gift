@@ -121,6 +121,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account.cs" />
     <Compile Include="AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -128,19 +129,25 @@
     <Compile Include="Attachment.cs" />
     <Compile Include="Attribute.cs" />
     <Compile Include="Category.cs" />
+    <Compile Include="Comment.cs" />
+    <Compile Include="Coupon.cs" />
+    <Compile Include="Favorite.cs" />
     <Compile Include="FriendLink.cs" />
     <Compile Include="GuestBook.cs" />
     <Compile Include="Investment.cs" />
     <Compile Include="News.cs" />
     <Compile Include="Node.cs" />
     <Compile Include="NodeGroup.cs" />
+    <Compile Include="Order.cs" />
     <Compile Include="Product.cs" />
+    <Compile Include="Region.cs" />
     <Compile Include="Role.cs" />
     <Compile Include="Role_Node.cs" />
     <Compile Include="SinglePage.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Article.cs" />
     <Compile Include="User_Role.cs" />
+    <Compile Include="Wuliu.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

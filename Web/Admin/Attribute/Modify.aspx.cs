@@ -11,26 +11,28 @@ using System.Web.UI.HtmlControls;
 using System.Text;
 using Maticsoft.Common;
 using LTP.Accounts.Bus;
-using tk.tingyuxuan.utils;
-namespace CMS.Web.Admin.Attribute
+namespace CMS.Web.Attribute
 {
-    public partial class Modify : CommonPage
+    public partial class Modify : Page
     {       
 
         		protected void Page_Load(object sender, EventArgs e)
 		{
 			if (!Page.IsPostBack)
 			{
-				#warning 代码生成提示：显示页面,请检查确认该语句是否正确
-				ShowInfo();
+				if (Request.Params["id"] != null && Request.Params["id"].Trim() != "")
+				{
+					int id=(Convert.ToInt32(Request.Params["id"]));
+					ShowInfo(id);
+				}
 			}
 		}
 			
-	private void ShowInfo()
+	private void ShowInfo(int id)
 	{
 		CMS.BLL.Attribute bll=new CMS.BLL.Attribute();
-		CMS.Model.Attribute model=bll.GetModel();
-		this.txtid.Text=model.id.ToString();
+		CMS.Model.Attribute model=bll.GetModel(id);
+		this.lblid.Text=model.id.ToString();
 		this.txtname.Text=model.name;
 		this.txtstyle.Text=model.style;
 
@@ -40,10 +42,6 @@ namespace CMS.Web.Admin.Attribute
 		{
 			
 			string strErr="";
-			if(!PageValidate.IsNumber(txtid.Text))
-			{
-				strErr+="id格式错误！\\n";	
-			}
 			if(this.txtname.Text.Trim().Length==0)
 			{
 				strErr+="name不能为空！\\n";	
@@ -55,12 +53,14 @@ namespace CMS.Web.Admin.Attribute
 
 			if(strErr!="")
 			{
-				MessageBoxTip.Alert(this,strErr);
+				MessageBox.Show(this,strErr);
 				return;
 			}
-			int id=int.Parse(this.txtid.Text);
+			int id=int.Parse(this.lblid.Text);
 			string name=this.txtname.Text;
 			string style=this.txtstyle.Text;
+
+
 			CMS.Model.Attribute model=new CMS.Model.Attribute();
 			model.id=id;
 			model.name=name;
@@ -68,14 +68,14 @@ namespace CMS.Web.Admin.Attribute
 
 			CMS.BLL.Attribute bll=new CMS.BLL.Attribute();
 			bll.Update(model);
-			MessageBoxTip.AlertAndRedirect(this,"保存成功！","List.aspx");
+            tk.tingyuxuan.utils.MessageBoxTip.AlertAndRedirect(this, "保存成功！", "List.aspx");
 
 		}
 
 
         public void btnCancle_Click(object sender, EventArgs e)
         {
-            Response.Redirect("List.aspx");
+            Response.Redirect("list.aspx");
         }
     }
 }

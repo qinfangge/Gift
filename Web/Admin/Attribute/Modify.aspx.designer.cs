@@ -7,19 +7,19 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace CMS.Web.Admin.Attribute {
+namespace CMS.Web.Attribute {
     
     
     public partial class Modify {
         
         /// <summary>
-        /// txtid 控件。
+        /// lblid 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtid;
+        protected global::System.Web.UI.WebControls.Label lblid;
         
         /// <summary>
         /// txtname 控件。

@@ -22,13 +22,13 @@
 		组
 	：</td>
 	<td class="textWrapper">
-		<asp:TextBox id="RoleName" runat="server" Width="200px"></asp:TextBox>
+		<asp:TextBox id="RoleName" runat="server" ></asp:TextBox>
 	</td></tr>
               <tr>  <td style="width: 8em;">
 		排序
 	：</td>
 	<td class="textWrapper">
-		<asp:TextBox id="Sort" runat="server" Width="200px"></asp:TextBox>
+		<asp:TextBox id="Sort" runat="server" ></asp:TextBox>
 	</td></tr>
              <tr>
                 <td class="buttonWrapper alignCenter" colspan="2">

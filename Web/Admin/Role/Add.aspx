@@ -14,7 +14,7 @@
                 <td style="width: 8em;">角色
 	：</td>
                 <td class="textWrapper">
-                    <asp:TextBox ID="RoleName" runat="server" Width="200px"></asp:TextBox>
+                    <asp:TextBox ID="RoleName" runat="server" ></asp:TextBox>
                 </td>
             </tr>
 
@@ -35,7 +35,7 @@
             <tr>
                 <td>排序：</td>
                 <td class="date">
-                  <asp:TextBox ID="Sort" runat="server" Width="200px"></asp:TextBox> <span class="tip">此项是整数</span> 
+                  <asp:TextBox ID="Sort" runat="server" ></asp:TextBox> <span class="tip">此项是整数</span> 
                 </td>
             </tr>
 

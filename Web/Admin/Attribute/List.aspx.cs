@@ -8,9 +8,9 @@ using System.Data;
 using Maticsoft.Common;
 using System.Drawing;
 using LTP.Accounts.Bus;
-namespace CMS.Web.Admin.Attribute
+namespace CMS.Web.Attribute
 {
-    public partial class List : CommonPage
+    public partial class List : Page
     {
         
         
@@ -38,7 +38,7 @@ namespace CMS.Web.Admin.Attribute
             string idlist = GetSelIDlist();
             if (idlist.Trim().Length == 0) 
                 return;
-            #warning 代码生成警告：多主键情况无法生成批量删除，请手工修改代码. //bll.DeleteList(idlist);
+            bll.DeleteList(idlist);
             BindData();
         }
         

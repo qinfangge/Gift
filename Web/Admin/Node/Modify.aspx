@@ -23,14 +23,14 @@
 		权限名称
 	：</td>
 	<td class="textWrapper">
-		<asp:TextBox id="Name" runat="server" Width="200px"></asp:TextBox>
+		<asp:TextBox id="Name" runat="server" ></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td >
 		地址
 	：</td>
 	<td class="textWrapper">
-		<asp:TextBox id="URL" runat="server" Width="200px"></asp:TextBox>
+		<asp:TextBox id="URL" runat="server" ></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td >
@@ -49,7 +49,7 @@
 		排序
 	：</td>
 	<td class="textWrapper">
-		<asp:TextBox id="Sort" runat="server" Width="200px"></asp:TextBox>
+		<asp:TextBox id="Sort" runat="server" ></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td >
@@ -64,7 +64,7 @@
 		菜单名称
 	：</td>
 	<td class="textWrapper">
-		<asp:TextBox id="MenuName" runat="server" Width="200px"></asp:TextBox>
+		<asp:TextBox id="MenuName" runat="server" ></asp:TextBox>
 	</td></tr>
              <tr>
                 <td class="buttonWrapper alignCenter" colspan="2">

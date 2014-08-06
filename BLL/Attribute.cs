@@ -1,4 +1,20 @@
-﻿using System;
+﻿/**  版本信息模板在安装目录下，可自行修改。
+* Attribute.cs
+*
+* 功 能： N/A
+* 类 名： Attribute
+*
+* Ver    变更日期             负责人  变更内容
+* ───────────────────────────────────
+* V0.01  2014/8/6 16:54:42   N/A    初版
+*
+* Copyright (c) 2012 Maticsoft Corporation. All rights reserved.
+*┌──────────────────────────────────┐
+*│　此技术信息为本公司机密信息，未经本公司书面同意禁止向第三方披露．　│
+*│　版权所有：动软卓越（北京）科技有限公司　　　　　　　　　　　　　　│
+*└──────────────────────────────────┘
+*/
+using System;
 using System.Data;
 using System.Collections.Generic;
 using Maticsoft.Common;
@@ -16,9 +32,25 @@ namespace CMS.BLL
 		#region  BasicMethod
 
 		/// <summary>
+		/// 得到最大ID
+		/// </summary>
+		public int GetMaxId()
+		{
+			return dal.GetMaxId();
+		}
+
+		/// <summary>
+		/// 是否存在该记录
+		/// </summary>
+		public bool Exists(int id)
+		{
+			return dal.Exists(id);
+		}
+
+		/// <summary>
 		/// 增加一条数据
 		/// </summary>
-		public bool Add(CMS.Model.Attribute model)
+		public int  Add(CMS.Model.Attribute model)
 		{
 			return dal.Add(model);
 		}
@@ -34,34 +66,41 @@ namespace CMS.BLL
 		/// <summary>
 		/// 删除一条数据
 		/// </summary>
-		public bool Delete()
+		public bool Delete(int id)
 		{
-			//该表无主键信息，请自定义主键/条件字段
-			return dal.Delete();
+			
+			return dal.Delete(id);
+		}
+		/// <summary>
+		/// 删除一条数据
+		/// </summary>
+		public bool DeleteList(string idlist )
+		{
+			return dal.DeleteList(idlist );
 		}
 
 		/// <summary>
 		/// 得到一个对象实体
 		/// </summary>
-		public CMS.Model.Attribute GetModel()
+		public CMS.Model.Attribute GetModel(int id)
 		{
-			//该表无主键信息，请自定义主键/条件字段
-			return dal.GetModel();
+			
+			return dal.GetModel(id);
 		}
 
 		/// <summary>
 		/// 得到一个对象实体，从缓存中
 		/// </summary>
-		public CMS.Model.Attribute GetModelByCache()
+		public CMS.Model.Attribute GetModelByCache(int id)
 		{
-			//该表无主键信息，请自定义主键/条件字段
-			string CacheKey = "AttributeModel-" ;
+			
+			string CacheKey = "AttributeModel-" + id;
 			object objModel = Maticsoft.Common.DataCache.GetCache(CacheKey);
 			if (objModel == null)
 			{
 				try
 				{
-					objModel = dal.GetModel();
+					objModel = dal.GetModel(id);
 					if (objModel != null)
 					{
 						int ModelCache = Maticsoft.Common.ConfigHelper.GetConfigInt("ModelCache");
@@ -149,25 +188,7 @@ namespace CMS.BLL
 
 		#endregion  BasicMethod
 		#region  ExtensionMethod
-         /// <summary>
-        /// 分页获取数据列表 for sql 2000
-        /// </summary>
-        public DataSet GetListByPage(string condition, string order, int pageSize, int currentPage, bool isGeneral)
-        {
-            return dal.GetListByPage(condition, order, pageSize, currentPage, isGeneral);
-        }
-		
-        /// <summary>
-        /// 获取前几条数据
-        /// </summary>
-        /// <param name="strWhere"></param>
-        /// <param name="orderby"></param>
-        /// <param name="number"></param>
-        /// <returns></returns>
-        public DataSet GetTopList(string strWhere, string orderby, int number)
-        {
-            return dal.GetTopList(strWhere, orderby, number);
-        }
+
 		#endregion  ExtensionMethod
 	}
 }

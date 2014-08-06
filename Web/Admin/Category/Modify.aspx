@@ -20,7 +20,7 @@
 		栏目名称
 	：</td>
 	<td class="textWrapper">
-		<asp:TextBox id="txtname" runat="server" Width="200px"></asp:TextBox>
+		<asp:TextBox id="txtname" runat="server" ></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td >
@@ -35,14 +35,14 @@
 		排序
 	：</td>
 	<td class="textWrapper">
-		<asp:TextBox id="txtsort" runat="server" Width="200px"></asp:TextBox>
+		<asp:TextBox id="txtsort" runat="server" ></asp:TextBox>
 	</td></tr>
     <tr>
 	<td>
 		关键词
 	：</td>
 	<td class="textWrapper">
-		<asp:TextBox id="txtkeywords" runat="server" Width="200px"></asp:TextBox>
+		<asp:TextBox id="txtkeywords" runat="server" ></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td >
