@@ -92,8 +92,9 @@ namespace CMS.Web.Admin.Product
 				return;
 			}
 			string title=this.txttitle.Text;
-            int price = int.Parse(Price.Text);
-            int saleprice = int.Parse(SalePrice.Text);
+            decimal price = decimal.Parse(Price.Text);
+            decimal salePrice = decimal.Parse(SalePrice.Text);
+            int number = int.Parse(Number.Text.Trim());
 			string content=this.txtcontent.Text;
             string titleImage = this.TitleImage.Value;
                     //titleImage = HtmlHelper.GetAllImgUrl(content, true);//从文章中提取url
@@ -111,7 +112,10 @@ namespace CMS.Web.Admin.Product
 			CMS.Model.Product model=new CMS.Model.Product();
 			model.title=title;
 			//model.source=source;
-			model.titleImage=titleImage;
+            model.price = price;
+            model.salePrice = salePrice;
+            model.titleImage = titleImage;
+            model.number = number;
 			model.content=content;
 			model.keywords=keywords;
 			model.description=description;

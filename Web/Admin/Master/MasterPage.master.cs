@@ -119,6 +119,7 @@ namespace CMS.Web.Admin
                         gridView.Rows[0].Cells[0].ColumnSpan = gridView.Columns.Count - hiddenColumn;
                         gridView.Rows[0].Cells[0].Text = "暂无信息！";
                         gridView.Rows[0].Cells[0].Style.Add("color", "red");
+                        this.ContentPlaceHolder1.FindControl("btnDelete").Visible = false;
                     }
                 }
             }

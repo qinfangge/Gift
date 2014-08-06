@@ -155,7 +155,7 @@ namespace CMS.Web.Admin.News
             int startIndex = (currentPage - 1) * pageSize + 1;
             int endIndex = currentPage * pageSize;
             //ds = bll.GetListByPage(strWhere.ToString(), orderBy, startIndex, endIndex);
-            ds = bll.GetListByPage(strWhere.ToString(), orderBy, pageSize, currentPage, true);
+          //  ds = bll.GetListByPage(strWhere.ToString(), orderBy, pageSize, currentPage, true);
             ds = bll.GetListByPage(strWhere.ToString(), orderBy, pageSize, currentPage, true);
             Pager1.RecordCount = bll.GetRecordCount(strWhere.ToString());
            
