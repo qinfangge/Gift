@@ -12,62 +12,62 @@
 	<td>
 		<asp:label id="lblid" runat="server"></asp:label>
 	</td></tr>
-	<tr>
-	<td>
-		content
+	 <tr>
+                <td style="width: 8em;">评论
 	：</td>
-	<td>
-		<asp:TextBox id="txtcontent" runat="server" ></asp:TextBox>
-	</td></tr>
-	<tr>
-	<td>
-		reply
+                <td>
+                    <asp:TextBox ID="txtcontent" TextMode="MultiLine" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>回复
 	：</td>
-	<td>
-		<asp:TextBox id="txtreply" runat="server" ></asp:TextBox>
-	</td></tr>
-	<tr>
-	<td>
-		addTime
+                <td>
+                    <asp:TextBox ID="txtreply" TextMode="MultiLine" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="textWrapper">添加时间
 	：</td>
-	<td>
-		<asp:TextBox ID="txtaddTime" runat="server" Width="70px"  onfocus="setday(this)"></asp:TextBox>
-	</td></tr>
-	<tr>
-	<td>
-		objectId
+                <td class="textWrapper">
+                    <asp:TextBox ID="txtaddTime" CssClass="date" runat="server" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>产品ID
 	：</td>
-	<td>
-		<asp:TextBox id="txtobjectId" runat="server" ></asp:TextBox>
-	</td></tr>
-	<tr>
-	<td>
-		userId
+                <td class="textWrapper">
+                    <asp:TextBox ID="txtobjectId" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>用户ID
 	：</td>
-	<td>
-		<asp:TextBox id="txtuserId" runat="server" ></asp:TextBox>
-	</td></tr>
-	<tr>
-	<td>
-		isdel
+                <td class="textWrapper">
+                    <asp:TextBox ID="txtuserId" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>是否删除
 	：</td>
-	<td>
-		<asp:TextBox id="txtisdel" runat="server" ></asp:TextBox>
-	</td></tr>
-	<tr>
-	<td>
-		评论的类型 1、产品 2、新闻
+                <td class="checkBoxWrapper">
+                    <asp:CheckBox ID="txtisdel" runat="server" OnCheckedChanged="txtisdel_CheckedChanged"></asp:CheckBox>
+                </td>
+            </tr>
+            <tr>
+                <td>评论的类型 1、产品 2、新闻
 	：</td>
-	<td>
-		<asp:TextBox id="txttype" runat="server" ></asp:TextBox>
-	</td></tr>
-	<tr>
-	<td>
-		isChecked
+                <td class="textWrapper">
+                    <asp:TextBox ID="txttype" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>审核
 	：</td>
-	<td>
-		<asp:TextBox id="txtisChecked" runat="server" ></asp:TextBox>
-	</td></tr>
+                <td class="checkBoxWrapper">
+                    <asp:CheckBox ID="txtisChecked" runat="server"></asp:CheckBox>
+                </td>
+            </tr>
      <tr>
                 <td class="buttonWrapper alignCenter" colspan="2">
 

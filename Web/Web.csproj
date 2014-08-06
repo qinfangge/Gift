@@ -100,10 +100,6 @@
     <Content Include="Admin\Coupon\List.aspx" />
     <Content Include="Admin\Coupon\Modify.aspx" />
     <Content Include="Admin\Css\leftMenu.css" />
-    <Content Include="Admin\Favorite\Add.aspx" />
-    <Content Include="Admin\Favorite\List.aspx" />
-    <Content Include="Admin\Favorite\Modify.aspx" />
-    <Content Include="Admin\Favorite\Show.aspx" />
     <Content Include="Admin\GuestBook\Add.aspx" />
     <Content Include="Admin\GuestBook\List.aspx" />
     <Content Include="Admin\GuestBook\Modify.aspx" />
@@ -493,14 +489,6 @@
     <Content Include="Admin\js\libs\uploadify\__MACOSX\._uploadify.swf" />
     <Content Include="Admin\Login.aspx" />
     <Content Include="Admin\LogOut.aspx" />
-    <Content Include="Admin\Order\Add.aspx" />
-    <Content Include="Admin\Order\List.aspx" />
-    <Content Include="Admin\Order\Modify.aspx" />
-    <Content Include="Admin\Order\Show.aspx" />
-    <Content Include="Admin\Region\Add.aspx" />
-    <Content Include="Admin\Region\List.aspx" />
-    <Content Include="Admin\Region\Modify.aspx" />
-    <Content Include="Admin\Region\Show.aspx" />
     <Content Include="Admin\User\ModifyProfile.aspx" />
     <Content Include="Admin\Role\Add.aspx" />
     <Content Include="Admin\Role\List.aspx" />
@@ -856,34 +844,6 @@
     <Compile Include="Admin\Coupon\Modify.aspx.designer.cs">
       <DependentUpon>Modify.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Favorite\Add.aspx.cs">
-      <DependentUpon>Add.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Favorite\Add.aspx.designer.cs">
-      <DependentUpon>Add.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Favorite\List.aspx.cs">
-      <DependentUpon>List.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Favorite\List.aspx.designer.cs">
-      <DependentUpon>List.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Favorite\Modify.aspx.cs">
-      <DependentUpon>Modify.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Favorite\Modify.aspx.designer.cs">
-      <DependentUpon>Modify.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Favorite\Show.aspx.cs">
-      <DependentUpon>Show.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Favorite\Show.aspx.designer.cs">
-      <DependentUpon>Show.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Admin\GuestBook\Add.aspx.cs">
       <DependentUpon>Add.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -948,62 +908,6 @@
     </Compile>
     <Compile Include="Admin\LogOut.aspx.designer.cs">
       <DependentUpon>LogOut.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Order\Add.aspx.cs">
-      <DependentUpon>Add.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Order\Add.aspx.designer.cs">
-      <DependentUpon>Add.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Order\List.aspx.cs">
-      <DependentUpon>List.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Order\List.aspx.designer.cs">
-      <DependentUpon>List.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Order\Modify.aspx.cs">
-      <DependentUpon>Modify.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Order\Modify.aspx.designer.cs">
-      <DependentUpon>Modify.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Order\Show.aspx.cs">
-      <DependentUpon>Show.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Order\Show.aspx.designer.cs">
-      <DependentUpon>Show.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Region\Add.aspx.cs">
-      <DependentUpon>Add.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Region\Add.aspx.designer.cs">
-      <DependentUpon>Add.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Region\List.aspx.cs">
-      <DependentUpon>List.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Region\List.aspx.designer.cs">
-      <DependentUpon>List.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Region\Modify.aspx.cs">
-      <DependentUpon>Modify.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Region\Modify.aspx.designer.cs">
-      <DependentUpon>Modify.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Region\Show.aspx.cs">
-      <DependentUpon>Show.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Region\Show.aspx.designer.cs">
-      <DependentUpon>Show.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\User\ModifyProfile.aspx.cs">
       <DependentUpon>ModifyProfile.aspx</DependentUpon>

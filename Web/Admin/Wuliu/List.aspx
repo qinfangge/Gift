@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Wuliu" Language="C#" MasterPageFile="../Master/MasterPage.master" AutoEventWireup="true" CodeBehind="List.aspx.cs" Inherits="CMS.Web.Wuliu.List" %>
 <%@ Register src="../../Controls/Pager.ascx" tagname="Pager" tagprefix="uc1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
- <script language="javascript" src="../js/checkBox.js" type="text/javascript"></script>
+    <script language="javascript" src="../js/checkBox.js" type="text/javascript"></script>
      <link href="/css/base/table.css" type="text/css" rel="stylesheet" />
     <link href="/css/base/pager.css" type="text/css" rel="stylesheet" />
 </asp:Content>
@@ -36,7 +36,7 @@
             <br />
            <asp:GridView  CssClass="list2" ID="gridView" runat="server" Width="100%" CellPadding="3"  OnPageIndexChanging ="gridView_PageIndexChanging"
                     BorderWidth="1px" DataKeyNames="id" OnRowDeleting="gridView_RowDeleting" OnRowDataBound="gridView_RowDataBound"
-                    AutoGenerateColumns="False"  RowStyle-HorizontalAlign="Center" OnRowCreated="gridView_OnRowCreated" EnableModelValidation="True">
+                    AutoGenerateColumns="False"  RowStyle-HorizontalAlign="Center" OnRowCreated="gridView_OnRowCreated" EnableModelValidation="True" OnSelectedIndexChanged="gridView_SelectedIndexChanged">
                     
                     <Columns>
                     <asp:TemplateField ControlStyle-Width="30" HeaderText="选择"    >

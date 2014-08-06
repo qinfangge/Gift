@@ -45,36 +45,15 @@
 <ControlStyle Width="30px"></ControlStyle>
                             </asp:TemplateField> 
                             
-		<asp:BoundField DataField="content" HeaderText="content" SortExpression="content" ItemStyle-HorizontalAlign="Center"  > 
+		<asp:BoundField DataField="content" HeaderText="评论" SortExpression="content" ItemStyle-HorizontalAlign="Center"  > 
 <ItemStyle HorizontalAlign="Center"></ItemStyle>
                         </asp:BoundField>
-		<asp:BoundField DataField="reply" HeaderText="reply" SortExpression="reply" ItemStyle-HorizontalAlign="Center"  > 
+		<asp:BoundField DataField="addTime" HeaderText="添加时间" SortExpression="addTime" ItemStyle-HorizontalAlign="Center"  > 
 <ItemStyle HorizontalAlign="Center"></ItemStyle>
                         </asp:BoundField>
-		<asp:BoundField DataField="addTime" HeaderText="addTime" SortExpression="addTime" ItemStyle-HorizontalAlign="Center"  > 
+		<asp:BoundField DataField="isChecked" HeaderText="审核" SortExpression="isChecked" ItemStyle-HorizontalAlign="Center"  > 
 <ItemStyle HorizontalAlign="Center"></ItemStyle>
                         </asp:BoundField>
-		<asp:BoundField DataField="objectId" HeaderText="objectId" SortExpression="objectId" ItemStyle-HorizontalAlign="Center"  > 
-<ItemStyle HorizontalAlign="Center"></ItemStyle>
-                        </asp:BoundField>
-		<asp:BoundField DataField="userId" HeaderText="userId" SortExpression="userId" ItemStyle-HorizontalAlign="Center"  > 
-<ItemStyle HorizontalAlign="Center"></ItemStyle>
-                        </asp:BoundField>
-		<asp:BoundField DataField="isdel" HeaderText="isdel" SortExpression="isdel" ItemStyle-HorizontalAlign="Center"  > 
-<ItemStyle HorizontalAlign="Center"></ItemStyle>
-                        </asp:BoundField>
-		<asp:BoundField DataField="type" HeaderText="评论的类型 1、产品 2、新闻" SortExpression="type" ItemStyle-HorizontalAlign="Center"  > 
-<ItemStyle HorizontalAlign="Center"></ItemStyle>
-                        </asp:BoundField>
-		<asp:BoundField DataField="isChecked" HeaderText="isChecked" SortExpression="isChecked" ItemStyle-HorizontalAlign="Center"  > 
-                            
-<ItemStyle HorizontalAlign="Center"></ItemStyle>
-                        </asp:BoundField>
-                            
-                            <asp:HyperLinkField HeaderText="详细" ControlStyle-Width="50" DataNavigateUrlFields="id" DataNavigateUrlFormatString="Show.aspx?id={0}"
-                                Text="详细"  >
-<ControlStyle Width="50px"></ControlStyle>
-                        </asp:HyperLinkField>
                             <asp:HyperLinkField HeaderText="编辑" ControlStyle-Width="50" DataNavigateUrlFields="id" DataNavigateUrlFormatString="Modify.aspx?id={0}"
                                 Text="编辑"  >
 <ControlStyle Width="50px"></ControlStyle>

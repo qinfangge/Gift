@@ -3,7 +3,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 <script language="javascript" src="../js/checkBox.js" type="text/javascript"></script>
      <link href="/css/base/table.css" type="text/css" rel="stylesheet" />
-    <link href="/css/base/pager.css" type="text/css" rel="stylesheet" /></asp:Content>
+    <link href="/css/base/pager.css" type="text/css" rel="stylesheet" />
+
+</asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
 <!--Title -->

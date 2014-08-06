@@ -42,14 +42,15 @@ namespace CMS.Web.Account
 		{
 			
 			string strErr="";
-			if(this.txtname.Text.Trim().Length==0)
-			{
-				strErr+="name不能为空！\\n";	
-			}
-			if(this.txtaccount.Text.Trim().Length==0)
-			{
-				strErr+="account不能为空！\\n";	
-			}
+            if (this.txtname.Text.Trim().Length == 0)
+            {
+                strErr += "名称不能为空！\\n";
+            }
+            if (this.txtaccount.Text.Trim().Length == 0)
+            {
+                strErr += "帐户不能为空！\\n";
+            }
+
 
 			if(strErr!="")
 			{

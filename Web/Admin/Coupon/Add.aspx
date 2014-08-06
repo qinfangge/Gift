@@ -11,14 +11,14 @@
 	<td style="width: 8em;">
 		标题
 	：</td>
-	<td>
+	<td class="textWrapper">
 		<asp:TextBox id="txttitle" runat="server" ></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td class="textWrapper">
 		优惠券金额
 	：</td>
-	<td>
+	<td class="textWrapper">
 		<asp:TextBox id="txtmoney" runat="server" ></asp:TextBox>
 	</td></tr>
 	<tr>
@@ -26,21 +26,21 @@
 		有效期开始时间
 	：</td>
 	<td class="textWrapper">
-		<asp:TextBox ID="txtstartTime" runat="server" onfocus="setday(this)"></asp:TextBox>
+		<asp:TextBox ID="txtstartTime"  onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" CssClass="date" runat="server" ></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td>
 		有效期结束时间
 	：</td>
 	<td class="textWrapper">
-		<asp:TextBox ID="txtendTime" runat="server"   onfocus="setday(this)"></asp:TextBox>
+		<asp:TextBox ID="txtendTime"  onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" CssClass="date" runat="server"  ></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td>
 		发放时间
 	：</td>
 	<td class="textWrapper">
-		<asp:TextBox ID="txtaddTime" runat="server"  onfocus="setday(this)"></asp:TextBox>
+		<asp:TextBox ID="txtaddTime"  onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" CssClass="date" runat="server" ></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td>

@@ -67,7 +67,7 @@ namespace CMS.Web.Account
             if (txtKeyword.Text.Trim() != "")
             {      
                 #warning 代码生成警告：请修改 keywordField 为需要匹配查询的真实字段名称
-                //strWhere.AppendFormat("keywordField like '%{0}%'", txtKeyword.Text.Trim());
+                strWhere.AppendFormat("name like '%{0}%'", txtKeyword.Text.Trim());
             }            
             ds = bll.GetList(strWhere.ToString());            
             gridView.DataSource = ds;
@@ -83,7 +83,7 @@ namespace CMS.Web.Account
         {
             if (e.Row.RowType == DataControlRowType.Header)
             {
-                //e.Row.Cells[0].Text = "<input id='Checkbox2' type='checkbox' onclick='CheckAll()'/><label></label>";
+                e.Row.Cells[0].Text = "<label><input id='checkAll' type='checkbox'/>全选</label>";
             }
         }
         protected void gridView_RowDataBound(object sender, GridViewRowEventArgs e)
@@ -106,9 +106,10 @@ namespace CMS.Web.Account
         protected void gridView_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             //#warning 代码生成警告：请检查确认真实主键的名称和类型是否正确
-            //int ID = (int)gridView.DataKeys[e.RowIndex].Value;
-            //bll.Delete(ID);
-            //gridView.OnBind();
+            int ID = (int)gridView.DataKeys[e.RowIndex].Value;
+            bll.Delete(ID);
+
+            BindData();
         }
 
         private string GetSelIDlist()

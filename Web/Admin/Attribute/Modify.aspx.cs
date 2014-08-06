@@ -42,14 +42,14 @@ namespace CMS.Web.Attribute
 		{
 			
 			string strErr="";
-			if(this.txtname.Text.Trim().Length==0)
-			{
-				strErr+="name不能为空！\\n";	
-			}
-			if(this.txtstyle.Text.Trim().Length==0)
-			{
-				strErr+="style不能为空！\\n";	
-			}
+            if (this.txtname.Text.Trim().Length == 0)
+            {
+                strErr += "名称不能为空！\\n";
+            }
+            if (this.txtstyle.Text.Trim().Length == 0)
+            {
+                strErr += "样式不能为空！\\n";
+            }
 
 			if(strErr!="")
 			{

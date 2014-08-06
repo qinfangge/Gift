@@ -9,21 +9,21 @@
 	<td>
 		id
 	：</td>
-	<td>
+	<td style="width: 8em;">
 		<asp:label id="lblid" runat="server"></asp:label>
 	</td></tr>
 	<tr>
 	<td>
-		name
+		名称
 	：</td>
-	<td>
+	<td class="textWrapper">
 		<asp:TextBox id="txtname" runat="server" ></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td>
-		style
+		样式
 	：</td>
-	<td>
+	<td class="textWrapper">
 		<asp:TextBox id="txtstyle" runat="server" ></asp:TextBox>
 	</td></tr>
      <tr>

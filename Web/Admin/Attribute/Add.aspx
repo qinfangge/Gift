@@ -8,17 +8,17 @@
     <div class="formView">
 <table cellSpacing="0" cellPadding="0" width="100%" border="0">
 	<tr>
-	<td>
-		name
+<td style="width: 8em;">
+		名称
 	：</td>
-	<td>
+	<td class="textWrapper">
 		<asp:TextBox id="txtname" runat="server" ></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td>
-		style
+		样式
 	：</td>
-	<td>
+	<td class="textWrapper">
 		<asp:TextBox id="txtstyle" runat="server" ></asp:TextBox>
 	</td></tr>
      <tr>
