@@ -11,7 +11,7 @@
     <div class="formView">
                 
 <table cellSpacing="0" cellPadding="0" width="100%" border="0">
-	<tr>
+	<tr style="display:none;">
 	<td>
 		id
 	：</td>

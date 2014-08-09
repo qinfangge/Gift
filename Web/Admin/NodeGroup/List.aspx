@@ -50,6 +50,10 @@
                                 <HeaderStyle Width="4em" Font-Bold="False" Font-Size="12px" />
                             </asp:TemplateField> 
                             
+		                <asp:BoundField DataField="sort" HeaderText="序号">
+                        <HeaderStyle Width="2em" />
+                        </asp:BoundField>
+                            
 		<asp:BoundField DataField="Name" HeaderText="权限组" ItemStyle-HorizontalAlign="Center"  > 
 		                <HeaderStyle Width="8em" />
 <ItemStyle HorizontalAlign="Center"></ItemStyle>

@@ -34,7 +34,7 @@ namespace CMS.Web.Wuliu
 		CMS.Model.Wuliu model=bll.GetModel(id);
 		this.lblid.Text=model.id.ToString();
 		this.txtname.Text=model.name;
-		this.txtmoney.Text=model.money.ToString();
+		this.txtmoney.Text=model.money.Value.ToString("0.###");
 		this.txtmemo.Text=model.memo;
 
 	}

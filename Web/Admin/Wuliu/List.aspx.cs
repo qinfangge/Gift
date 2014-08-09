@@ -27,10 +27,18 @@ namespace CMS.Web.Wuliu
                 BindData();
             }
         }
-        
+
         protected void btnSearch_Click(object sender, EventArgs e)
         {
-            BindData();
+
+            string url = this.Request.FilePath + "?";
+
+            if (!string.IsNullOrEmpty(txtKeyword.Text))
+            {
+                url += "keywords=" + txtKeyword.Text;
+            }
+
+            Response.Redirect(url, true);
         }
         
         protected void btnDelete_Click(object sender, EventArgs e)
@@ -64,6 +72,12 @@ namespace CMS.Web.Wuliu
 
             DataSet ds = new DataSet();
             StringBuilder strWhere = new StringBuilder();
+            if (!string.IsNullOrEmpty(Request["keyWords"]))
+            {
+
+                txtKeyword.Text = Request["keyWords"].ToString();
+            }
+
             if (txtKeyword.Text.Trim() != "")
             {      
                 #warning 代码生成警告：请修改 keywordField 为需要匹配查询的真实字段名称

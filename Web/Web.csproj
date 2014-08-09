@@ -1326,6 +1326,7 @@
   <ItemGroup>
     <Folder Include="Components\" />
     <Folder Include="Upload\" />
+    <Folder Include="UserCenter\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin\images\Thumbs.db" />

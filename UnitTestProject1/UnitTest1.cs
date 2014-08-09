@@ -23,8 +23,9 @@ namespace UnitTestProject1
         [TestMethod]
         public void TestMethod3()
         {
-            string a = "abc";
-            double.Parse(a);
+            decimal a = 12.1230M;
+            Console.Write(a);
+            Console.Write(a.ToString("0.###"));
            
            
         }

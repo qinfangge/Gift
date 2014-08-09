@@ -50,7 +50,7 @@
 		<asp:BoundField DataField="name" HeaderText="快递名称" SortExpression="name" ItemStyle-HorizontalAlign="Center"  > 
 <ItemStyle HorizontalAlign="Center"></ItemStyle>
                         </asp:BoundField>
-		<asp:BoundField DataField="money" HeaderText="费用" SortExpression="money" ItemStyle-HorizontalAlign="Center"  > 
+		<asp:BoundField DataField="money" HeaderText="费用" SortExpression="money" ItemStyle-HorizontalAlign="Center" DataFormatString="{0:0.###}"  > 
 <ItemStyle HorizontalAlign="Center"></ItemStyle>
                         </asp:BoundField>
 		<asp:BoundField DataField="memo" HeaderText="备注" SortExpression="memo" ItemStyle-HorizontalAlign="Center"  > 

@@ -84,7 +84,7 @@ namespace CMS.Web.Admin.NodeGroup
                 strWhere.AppendFormat(" and name like '%{0}%'", txtKeyword.Text.Trim());
             }
 
-            string orderBy = "id desc";
+            string orderBy = "sort asc";
             int currentPage = 1;
             if (!string.IsNullOrEmpty(Request["page"]))
             {
